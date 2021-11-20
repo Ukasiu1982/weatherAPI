@@ -15,7 +15,7 @@ class Weather:
     def get_data(self):
         req_url = f'https://api.meteomatics.com/{self.date}T12:00:00+01:00/precip_24h:mm/50.255689,19.022147/json'
         payload = {'key': self.api_key, "q": "London", "dt": str(self.date)}
-        r = requests.get(req_url,auth=(self.api_key.split(':')[0], self.api_key.split(':')[1]))
+        r = requests.get(req_url, auth=(self.api_key.split(':')[0], self.api_key.split(':')[1]))
         return r.json()['data'][0]['coordinates'][0]['dates']
 
 
@@ -58,4 +58,4 @@ else:
 with open('forecast.json', 'w') as file:
     json.dump(odczyt, file)
 
-
+# python weather.py xxx_lop:Dl4J21CzabiMX  2022-11-11
