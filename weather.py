@@ -59,3 +59,5 @@ with open('forecast.json', 'w') as file:
     json.dump(odczyt, file)
 
 # python weather.py xxx_lop:Dl4J21CzabiMX  2022-11-11
+
+
